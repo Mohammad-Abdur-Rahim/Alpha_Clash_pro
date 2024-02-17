@@ -29,10 +29,18 @@ function getRandomAlphabat() {
 
 
 document.addEventListener('keyup',function userInput(event){
-    const userInput= event.key; //user input  store here
+    const userInput= event.key;
+    const userInputFinal =userInput.toUpperCase(); //user input  store here
+    
     // Display Input store here
     const showAlphabat = document.getElementById('showAlphabat');
     const displayOutput=showAlphabat.innerText;
-    const displayUpper = displayOutput.toUpperCase();
-    console.log(displayUpper,userInput); //user and display input show here
+    console.log(displayOutput,userInputFinal); //user and display input show here
+
+    //Check User Input and Display Input matched-----
+    if(userInputFinal==displayOutput){
+        console.log("Matched keyword");
+    }else{
+        console.log("Not matched keyword");
+    }
 })
