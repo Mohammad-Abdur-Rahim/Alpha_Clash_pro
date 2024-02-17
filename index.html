@@ -19,15 +19,15 @@
   </header>
   <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
     <!-- Home Section start here -->
-    <section class="home hidden ">
-      <div class="  min-h-screen flex flex-col gap-10 justify-center items-center">
+    <section id="home" class="min-h-screen flex flex-col  justify-center items-center" >
+      <div class="text-center space-y-8">
         <h1 class="text-7xl text-white text-center font-anton uppercase">Alpha Clash Pro</h1>
         <p class="text-white">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-        <button class="btn bg-white text-black">Play Now</button>
+        <button onclick="play()"  class="btn bg-white text-black">Play Now</button>
       </div>
     </section>
     <!-- Play ground Start here -->
-    <section class="play_ground hidden">
+    <section id="playground" class="play_ground hidden">
       <div class="min-h-screen flex flex-col justify-center items-center gap-20">
         <div class="artboard artboard-horizontal phone-6 border-8 border-[#010313CC] bg-[#FFFFFFB3]">
           <div class="flex justify-center">
@@ -88,7 +88,7 @@
       </div>
     </section>
     <!-- Score Section Start here -->
-    <section class="score min-h-screen flex flex-col justify-center items-center ">
+    <section class="score min-h-screen flex flex-col justify-center items-center hidden ">
       <div class=" bg-[#b18de733] text-center text-white p-6 rounded-lg space-y-7">
         <p class="text-6xl">Score : <span class="text-6xl ">14</span></p>
 
@@ -100,7 +100,7 @@
   <footer>
 
   </footer>
-  <script src="index.js"></script>
+  <script src="script/index.js"></script>
 </body>
 
 </html>
