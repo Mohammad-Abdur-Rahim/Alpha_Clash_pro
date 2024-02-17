@@ -19,5 +19,5 @@ function getRandomAlphabat(){
     const index=Math.round(randomNumber);
 
     const alphabat = alphbatArray[index];
-    console.log(index,alphabat);
+    return alphabat;
 }
