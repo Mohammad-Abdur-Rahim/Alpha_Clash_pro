@@ -16,6 +16,7 @@ function play() {
     hideElement('scorePage');
     showElement('playground');
     setInnerText('life-number',5);
+    setInnerText('current-score',0);
     continueGame();
     
 
