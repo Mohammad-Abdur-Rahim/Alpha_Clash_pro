@@ -44,11 +44,29 @@ document.addEventListener('keyup',function userInput(event){
 
     //Check User Input and Display Input matched-----
     if(userInputFinal===displayOutput){
-        console.log("Matched keyword");
-        removeBg(displayOutput);
+        //update score function start -------------------------------------
+        const current=document.getElementById('current-score');
+        const currentText=current.innerText;
+        const currentScore=parseInt(currentText);
+        console.log(currentScore);
+        //increase the score
+        const newScore= currentScore+1;
+        //update the score
+        current.innerText=newScore;
+
+       //new round fn
         continueGame();
     }
     else{
         console.log("Not matched keyword");
+        //score life function-------------------------------
+        const life=document.getElementById('life-number');
+        const lifeText =life.innerText;
+        const remainLife =parseInt(lifeText);
+           //decrease the score
+           const finalLife=remainLife-1;
+           //update life 
+           life.innerText=finalLife;
+
     }
 });
