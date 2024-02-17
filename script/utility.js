@@ -16,6 +16,18 @@ function removeBg(elementId) {
     const color = document.getElementById(elementId);
     color.classList.remove('bg-orange-400');
 };
+//-------------------------new +++ -----------------
+function userInputValue(elementId){
+    const element=document.getElementById(elementId);
+    const elementValueText=element.innerText;
+    const elementValue=parseInt(elementValueText);
+    return elementValue;
+}
+function setInnerText(elementId,value){
+    const element = document.getElementById(elementId);
+    element.innerText=value;
+
+}
 
 //1st part  fn------------------------------------------------------------
 function getRandomAlphabat() {
@@ -45,14 +57,10 @@ document.addEventListener('keyup',function userInput(event){
     //Check User Input and Display Input matched-----
     if(userInputFinal===displayOutput){
         //update score function start -------------------------------------
-        const current=document.getElementById('current-score');
-        const currentText=current.innerText;
-        const currentScore=parseInt(currentText);
-        console.log(currentScore);
-        //increase the score
+        const currentScore=userInputValue('current-score');
         const newScore= currentScore+1;
-        //update the score
-        current.innerText=newScore;
+        setInnerText('current-score',newScore);
+        // currentScore.innerText=newScore;
 
        //new round fn
         continueGame();
@@ -60,13 +68,9 @@ document.addEventListener('keyup',function userInput(event){
     else{
         console.log("Not matched keyword");
         //score life function-------------------------------
-        const life=document.getElementById('life-number');
-        const lifeText =life.innerText;
-        const remainLife =parseInt(lifeText);
-           //decrease the score
+        const remainLife=userInputValue('life-number');
            const finalLife=remainLife-1;
-           //update life 
-           life.innerText=finalLife;
+           setInnerText('life-number',finalLife);
 
     }
 });
