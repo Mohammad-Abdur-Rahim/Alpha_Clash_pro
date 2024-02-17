@@ -13,7 +13,10 @@ function continueGame() {
 
 function play() {
     hideElement('home');
+    hideElement('scorePage');
     showElement('playground');
+    setInnerText('life-number',5);
     continueGame();
+    
 
 }

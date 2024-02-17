@@ -71,6 +71,10 @@ document.addEventListener('keyup',function userInput(event){
         const remainLife=userInputValue('life-number');
            const finalLife=remainLife-1;
            setInnerText('life-number',finalLife);
+           if(finalLife===0){
+            hideElement('playground');
+            showElement('scorePage');
+           }
 
     }
 });
