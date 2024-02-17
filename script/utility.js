@@ -25,3 +25,7 @@ function getRandomAlphabat() {
     const alphabat = alphbatArray[index];
     return alphabat;
 }
+//Alphaa Clash II Project code start here 
+document.addEventListener('keyup',function userInput(){
+    console.log('Received key user input');
+})
