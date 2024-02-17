@@ -19,5 +19,11 @@ function play() {
     setInnerText('current-score',0);
     continueGame();
     
+}
+function gameOver(){
+    hideElement('playground');
+    showElement('scorePage');
+    const result =userInputValue('current-score');
+    setInnerText('finalLastScore',result);
 
 }
